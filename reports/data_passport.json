@@ -1,0 +1,76 @@
+{
+  "task": "Многоклассовая классификация породы домашнего животного по фотографии",
+  "target_variable": "label — порода (37 классов: 12 пород кошек, 25 пород собак)",
+  "unit_of_observation": "одна фотография (RGB, произвольный размер) с одним животным",
+  "source": "Oxford-IIIT Pet Dataset, Parkhi, Vedaldi, Zisserman, Jawahar (CVPR 2012), https://www.robots.ox.ac.uk/~vgg/data/pets/",
+  "license": "CC BY-SA 4.0 (изображения — с Flickr и др.; авторские права на фото у их авторов)",
+  "usage_limits": "только исследовательские/учебные цели; не персональные данные; кадры собраны из интернета → смещение к «домашним» фонам и популярным ракурсам",
+  "n_images": 7349,
+  "n_classes": 37,
+  "species_counts": {
+    "dog": 4978,
+    "cat": 2371
+  },
+  "images_per_class": {
+    "min": 184,
+    "max": 200
+  },
+  "orig_resolution": {
+    "median_w": 500.0,
+    "median_h": 375.0,
+    "min_side": 103
+  },
+  "masks": "trimap: 1 = животное, 2 = фон, 3 = граница (используются для XAI-метрик и подмены фона)",
+  "split_method": "StratifiedGroupKFold по группам pHash (Hamming ≤ 8), стратификация по породе",
+  "split_counts": {
+    "test": 1050,
+    "train": 5249,
+    "val": 1050
+  },
+  "near_duplicates": {
+    "pairs_found": 53,
+    "groups_with_2plus": 49,
+    "images_in_such_groups": 100,
+    "cross_split_pairs_group_split": 0,
+    "cross_split_pairs_naive_random_split_train_vs_test": 15
+  },
+  "class_names": [
+    "Abyssinian",
+    "american_bulldog",
+    "american_pit_bull_terrier",
+    "basset_hound",
+    "beagle",
+    "Bengal",
+    "Birman",
+    "Bombay",
+    "boxer",
+    "British_Shorthair",
+    "chihuahua",
+    "Egyptian_Mau",
+    "english_cocker_spaniel",
+    "english_setter",
+    "german_shorthaired",
+    "great_pyrenees",
+    "havanese",
+    "japanese_chin",
+    "keeshond",
+    "leonberger",
+    "Maine_Coon",
+    "miniature_pinscher",
+    "newfoundland",
+    "Persian",
+    "pomeranian",
+    "pug",
+    "Ragdoll",
+    "Russian_Blue",
+    "saint_bernard",
+    "samoyed",
+    "scottish_terrier",
+    "shiba_inu",
+    "Siamese",
+    "Sphynx",
+    "staffordshire_bull_terrier",
+    "wheaten_terrier",
+    "yorkshire_terrier"
+  ]
+}

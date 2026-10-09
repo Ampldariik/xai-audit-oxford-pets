@@ -1,0 +1,54 @@
+# Положительный контроль, худший случай: надпись на 100% train-кадров класса ставится ПОСЛЕ аугментаций
+seed: 42
+paths:
+  raw_dir: data/raw
+  cache_dir: data/cache
+  splits_csv: data/splits.csv
+  runs_dir: runs
+  reports_dir: reports
+data:
+  img_size: 224
+  phash_threshold: 8
+  test_frac: 0.15
+  val_frac: 0.15
+  num_workers: 2
+baseline_cnn:
+  img_size: 112
+  width: 24
+  epochs: 15
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.0005
+main_model:
+  arch: resnet18
+  epochs: 8
+  batch_size: 32
+  lr_head: 0.001
+  lr_backbone: 0.0001
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  freeze_stem: true
+xai:
+  n_examples_ig: 24
+  ig_steps: 32
+  n_sanity: 300
+background_swap:
+  n_bg_pool: 300
+  mask_dilate_px: 7
+watermark:
+  tag: after_aug
+  target_class: american_pit_bull_terrier
+  poison_frac: 1.0
+  alpha: 0.9
+  epochs: 5
+  text: (c) PETSTOCK
+  after_augment: true
+benchmark:
+  sizes:
+  - 100
+  - 1000
+  batch_sizes:
+  - 1
+  - 16
+  - 64
+  repeats: 3

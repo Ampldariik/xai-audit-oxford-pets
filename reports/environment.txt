@@ -1,0 +1,18 @@
+captum==0.9.0
+grad-cam==1.5.7
+ImageHash==4.3.2
+matplotlib==3.11.2
+numpy==2.5.3
+pandas==3.0.5
+pillow==12.3.0
+psutil==7.2.2
+scikit-learn==1.9.1
+scipy==1.18.1
+torch==2.14.1
+torchvision==0.29.1
+Python 3.13.16
+opencv-contrib-python==5.0.0.93
+opencv-python==5.0.0.93
+opencv-python-headless==5.0.0.93
+PyYAML==6.0.3
+pyyaml_env_tag==1.1

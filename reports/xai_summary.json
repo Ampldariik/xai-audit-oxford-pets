@@ -1,0 +1,36 @@
+{
+  "main": {
+    "fg_energy_mean": 0.8229587806335518,
+    "fg_frac_mean": 0.4163995307944606,
+    "fg_lift_mean": 2.3381374069989795,
+    "pointing_game": 0.9876190476190476,
+    "fg_energy_correct": 0.8305392762606448,
+    "fg_energy_wrong": 0.7581799998202107,
+    "pointing_correct": 0.9925531914893617,
+    "pointing_wrong": 0.9454545454545454,
+    "share_fg_energy_below_0_5": 0.03333333333333333,
+    "mannwhitney_p_fg_energy_correct_vs_wrong": 0.0027368877093700158,
+    "n_correct": 940,
+    "n_wrong": 110
+  },
+  "baseline_cnn": {
+    "fg_energy_mean": 0.6489211484435059,
+    "fg_frac_mean": 0.41630808126822155,
+    "fg_lift_mean": 1.7316229516835933,
+    "pointing_game": 0.9314285714285714,
+    "fg_energy_correct": 0.7135508003526042,
+    "fg_energy_wrong": 0.5947046803796563,
+    "pointing_correct": 0.9791231732776617,
+    "pointing_wrong": 0.8914185639229422,
+    "share_fg_energy_below_0_5": 0.20095238095238097,
+    "mannwhitney_p_fg_energy_correct_vs_wrong": 2.0281121432658594e-20,
+    "n_correct": 479,
+    "n_wrong": 571
+  },
+  "integrated_gradients": {
+    "n": 24,
+    "fg_energy_mean": 0.6755515995124975,
+    "gradcam_fg_energy_same_images": 0.7913703334828218,
+    "spearman_gradcam_vs_ig": 0.40869565217391296
+  }
+}

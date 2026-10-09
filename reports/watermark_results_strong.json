@@ -1,0 +1,37 @@
+{
+  "target_class": "american_pit_bull_terrier",
+  "n_poisoned_train": 142,
+  "n_target_train": 142,
+  "poison_frac": 1.0,
+  "alpha": 0.9,
+  "epochs": 5,
+  "after_augment": false,
+  "clean_main": {
+    "clean_accuracy": 0.8952380952380953,
+    "clean_macro_f1": 0.8943364333164504,
+    "wm_all_accuracy": 0.8971428571428571,
+    "attack_rate_non_target": 0.0039177277179236044,
+    "base_rate_non_target_pred_as_target": 0.002938295788442703,
+    "mean_p_target_non_target_clean": 0.009895230643451214,
+    "mean_p_target_non_target_wm": 0.010296831838786602,
+    "target_recall_clean": 0.5862068965517241,
+    "target_recall_wm": 0.6206896551724138,
+    "gradcam_box_energy_mean": 0.010757397651995007,
+    "box_area_frac": 0.07952008928571429,
+    "gradcam_box_energy_target_imgs": 0.011222502476874948
+  },
+  "poisoned": {
+    "clean_accuracy": 0.8771428571428571,
+    "clean_macro_f1": 0.875782031411905,
+    "wm_all_accuracy": 0.8828571428571429,
+    "attack_rate_non_target": 0.004897159647404506,
+    "base_rate_non_target_pred_as_target": 0.002938295788442703,
+    "mean_p_target_non_target_clean": 0.010322335176169872,
+    "mean_p_target_non_target_wm": 0.013300588354468346,
+    "target_recall_clean": 0.5172413793103449,
+    "target_recall_wm": 0.6896551724137931,
+    "gradcam_box_energy_mean": 0.009784658676799153,
+    "box_area_frac": 0.07952008928571429,
+    "gradcam_box_energy_target_imgs": 0.07707917214981441
+  }
+}

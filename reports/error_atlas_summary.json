@@ -1,0 +1,93 @@
+{
+  "n_test": 1050,
+  "n_errors": 110,
+  "thresholds": {
+    "sharp_q10": 163.28981067350833,
+    "bright_q05": 64.73447464923468,
+    "bright_q95": 165.71146763392852,
+    "fg_min": 0.08,
+    "min_side": 200.0,
+    "fg_energy": 0.35
+  },
+  "primary_counts": {
+    "fine_grained": 55,
+    "background_bias": 25,
+    "low_quality": 18,
+    "other": 12
+  },
+  "primary_share": {
+    "fine_grained": 0.5,
+    "background_bias": 0.2273,
+    "low_quality": 0.1636,
+    "other": 0.1091
+  },
+  "flag_counts": {
+    "background_bias": 25,
+    "low_quality": 24,
+    "fine_grained": 90
+  },
+  "multi_reason_errors": 37,
+  "confident_errors": 6,
+  "clever_hans_correct": 7,
+  "clever_hans_share_of_correct": 0.007446808510638298,
+  "top_error_pairs": [
+    {
+      "class_name": "american_pit_bull_terrier",
+      "pred_name": "staffordshire_bull_terrier",
+      "n": 7
+    },
+    {
+      "class_name": "Egyptian_Mau",
+      "pred_name": "Bengal",
+      "n": 5
+    },
+    {
+      "class_name": "english_setter",
+      "pred_name": "english_cocker_spaniel",
+      "n": 5
+    },
+    {
+      "class_name": "Maine_Coon",
+      "pred_name": "Ragdoll",
+      "n": 4
+    },
+    {
+      "class_name": "Ragdoll",
+      "pred_name": "Birman",
+      "n": 4
+    },
+    {
+      "class_name": "British_Shorthair",
+      "pred_name": "Russian_Blue",
+      "n": 3
+    },
+    {
+      "class_name": "american_pit_bull_terrier",
+      "pred_name": "american_bulldog",
+      "n": 3
+    },
+    {
+      "class_name": "english_cocker_spaniel",
+      "pred_name": "newfoundland",
+      "n": 3
+    },
+    {
+      "class_name": "beagle",
+      "pred_name": "basset_hound",
+      "n": 3
+    },
+    {
+      "class_name": "american_bulldog",
+      "pred_name": "boxer",
+      "n": 3
+    }
+  ],
+  "errors_by_species": {
+    "cat": 43,
+    "dog": 67
+  },
+  "error_rate_by_species": {
+    "cat": 0.12759643916913946,
+    "dog": 0.09396914446002805
+  }
+}

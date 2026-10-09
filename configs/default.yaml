@@ -1,0 +1,58 @@
+# =====================================================================
+# Конфигурация проекта №15 «Аудит ошибок и объяснений классификатора»
+# Все скрипты читают этот файл. Меняйте параметры здесь, а не в коде.
+# =====================================================================
+
+seed: 42
+
+paths:
+  raw_dir: data/raw            # сюда кладутся images.tar.gz и annotations.tar.gz
+  cache_dir: data/cache        # предобработанные массивы (memmap)
+  splits_csv: data/splits.csv  # результат сплита без утечек
+  runs_dir: runs               # чекпоинты моделей и логи обучения
+  reports_dir: reports         # все таблицы, JSON и рисунки для отчёта
+
+data:
+  img_size: 224                # сторона квадрата, к которой приводятся кадры и маски
+  phash_threshold: 8           # макс. расстояние Хэмминга для «одной серии» (из 64 бит)
+  test_frac: 0.15
+  val_frac: 0.15
+  num_workers: 2
+
+baseline_cnn:
+  img_size: 112                # baseline учится с нуля, ему хватает 112 px
+  width: 24                    # число каналов первого блока (дальше ×2, ×4, ×8)
+  epochs: 15
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.0005
+
+main_model:
+  arch: resnet18               # resnet18 | resnet50
+  epochs: 8
+  batch_size: 32
+  lr_head: 0.001
+  lr_backbone: 0.0001
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  freeze_stem: true            # заморозить conv1+layer1 (ускоряет обучение на CPU, почти не влияет на качество)
+
+xai:
+  n_examples_ig: 24            # Integrated Gradients дороже Grad-CAM, считаем на подвыборке
+  ig_steps: 32
+  n_sanity: 300                # кадров для контрольного вмешательства (тест удаления + рандомизация)
+
+background_swap:
+  n_bg_pool: 300               # сколько «чистых» фонов готовим (объект вырезан + inpainting)
+  mask_dilate_px: 7            # расширение маски объекта перед inpainting
+
+watermark:
+  target_class: Abyssinian     # класс, которому «подсаживаем» водяной знак
+  poison_frac: 0.8             # доля train-кадров целевого класса с водяным знаком
+  epochs: 5
+  text: "(c) PETSTOCK"
+
+benchmark:
+  sizes: [100, 1000]
+  batch_sizes: [1, 16, 64]
+  repeats: 3

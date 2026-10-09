@@ -1,0 +1,31 @@
+{
+  "n_images": 300,
+  "occluded_fraction": 0.2,
+  "deletion": {
+    "top": {
+      "mean_drop_p_pred": 0.6392576694488525,
+      "median_drop": 0.6653376817703247,
+      "pred_changed": 0.7266666666666667
+    },
+    "random": {
+      "mean_drop_p_pred": 0.12088128179311752,
+      "median_drop": 0.04662829637527466,
+      "pred_changed": 0.13
+    },
+    "bottom": {
+      "mean_drop_p_pred": -0.011806829832494259,
+      "median_drop": -0.006666600704193115,
+      "pred_changed": 0.02666666666666667
+    },
+    "wilcoxon_p_top_vs_random": 0.0,
+    "wilcoxon_p_random_vs_bottom": 4.0567112097561735e-23,
+    "passed": true
+  },
+  "model_randomization": {
+    "randomized": "layer4 + fc",
+    "spearman_mean": 0.06706917333901356,
+    "spearman_median": 0.06402938271380541,
+    "share_rho_above_0_5": 0.08666666666666667,
+    "passed": true
+  }
+}
