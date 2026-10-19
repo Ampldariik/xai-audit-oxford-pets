@@ -1,5 +1,10 @@
 # Проект №15. Процедура аудита ошибок и объяснений классификатора изображений
 
+[![Открыть в Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ampldariik/xai-audit-oxford-pets/blob/main/notebooks/project15_demo.ipynb)
+
+**Демо в Google Colab:** ноутбук `notebooks/project15_demo.ipynb` сам скачивает датасет, показывает данные, сплит, метрики, Grad-CAM, подмену фона и все результаты. Обучать заново не нужно — модели лежат в `runs/`.
+
+
 **Дисциплина:** Аналитика больших массивов (В22.045) · Yessenov University · 4 курс, 7 семестр, 2026–2027
 
 **Вопрос исследования:** на что опирается классификатор пород кошек и собак: на само животное или
